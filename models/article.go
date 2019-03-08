@@ -49,7 +49,7 @@ func GetArticle(id int) (article Article) {
 func EditArticle(id int, data interface{}) bool {
 	db.Model(&Article{}).Where("id=?", id).Updates(data)
 
-	return
+	return true
 }
 
 func AddArticle(data map[string]interface{}) bool {
